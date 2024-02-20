@@ -25,6 +25,8 @@ myarr.pop()
 // console.log(myarr.indexOf(9))
 // console.log(myarr.includes(5))//true
 
+
+//convert to string
 const newArr = myarr.join()
 //console.log(newArr)
 
