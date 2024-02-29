@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .buttons {
+            display: inline;
+        }
+        #subt{
+            background-color: rgb(82, 145, 136);
+            color:white;
+            height: 30px;
+            width:95px;
+            padding: 5px;
+            margin: 2px;
+            border: solid  rgb(82, 145, 136) 1px;
+            border-radius: 3px;
+           font-weight: bold;
+        }
+        #start{
+            background-color: green;
+            color:white;
+            height: 30px;
+            width:95px;
+            padding: 5px;
+            margin: 2px;
+            border: solid green 1px;
+            border-radius: 3px;
+           font-weight: bold;
+        }
+        #stop{
+            background-color: red;
+            color:white;
+            height: 30px;
+            width:95px;
+            padding: 5px;
+            margin: 2px;
+            border: solid red 1px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        #input{
+            border: solid  rgb(82, 145, 136) 2px;
+            border-radius: 3px;
+            width: 100px;
+            height: 20px;
+            margin:2px
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <h1>Click the Start button to see the magic </h1>
+    <p>click stop to stop it</p>
+     <label style="display: inline;" for="input" id="interval" >
+        Enter TimeInterval: <input type="text" id="input"  placeholder="enter interval (in sec)"></label>
+        <button type="submit" id="subt">Submit</button>
+   
+       
+    <div class="buttons">
+        
+        <!-- <button id="start">Start</button> -->
+    <button id="stop">Stop</button>
+    </div>
+    
+    </div>
+   
+</body>
+<script>
+    const body = document.querySelector("body")
+    function setColor() {
+        let random1 = Math.floor(Math.random() * 255)
+        let random2 = Math.floor(Math.random() * 255)
+        let random3 = Math.floor(Math.random() * 255)
+        return `rgb(${random1},${random2},${random3})`;
+    }
+    const input = document.querySelector("input")
+    //    let time ;
+    // document.querySelector("#subt").addEventListener("click",function(e){
+    //     e.preventDefault()
+    //     time = input.value;
+    // })
+
+    let intervalId;
+    document.querySelector("#subt").addEventListener("click", function () {
+        clearInterval(intervalId);
+        if( input.value == 0){
+            input.value = 1;
+        }
+        const interval = setInterval(() => {
+            body.style.backgroundColor = setColor()
+        }, input.value * 1000);
+
+        intervalId = interval;
+        
+        
+        document.querySelector("#stop").addEventListener("click", function () {
+            clearInterval(interval);
+            intervalId = null;
+        });
+    });
+</script>
+</html>

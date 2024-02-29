@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            width:500px;
+            height: 600px;
+            border: solid 1px black;
+            border-radius: 30px;
+
+            
+        }
+        .image{
+            overflow: hidden;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="" alt="img" width="100%" class="image">
+            <h2 class="name"></h2>
+            <p class="followers"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+  const xhr= new XMLHttpRequest()
+  console.log(xhr.readyState)//0
+  xhr.open("GET",requestUrl)//1
+  let data;
+ xhr.onreadystatechange = function(){
+    console.log(xhr.readyState)
+    if(xhr.readyState === 4 && xhr.status === 200){
+      data = this.responseText
+        console.log( data);//string format
+        data = JSON.parse(this.responseText);
+        console.log(typeof data);//typeof= object
+        console.log( data);//typeof= object
+        console.log(data.followers);
+
+        //since httprequest is async task
+        //so dom need to be inside the task
+        document.querySelector(".image").setAttribute("src",`${data.avatar_url}`);
+        document.querySelector(".followers").innerHTML = `${data.followers}`
+        document.querySelector(".name").innerHTML = `${data.name}`
+        
+
+    }
+ }
+ 
+  xhr.send();
+
+
+ 
+</script>
+</html>
