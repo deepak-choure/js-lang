@@ -24,6 +24,11 @@ console.log(simple_another_array);
 console.log(Array.isArray("Name"))
 // console.log(Array.from("Deepak"));
 console.log(Array.from({name: "Deepak",age: 21, }))//only valid for iterable object
+
+//we can create an array of 0 to n-1
+let number =6;
+console.log(Array.from(Array(number).keys()));
+
 let num1 = 100
 let num2 = 200
 let num3 = 300
