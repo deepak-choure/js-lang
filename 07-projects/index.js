@@ -28,10 +28,18 @@
 
 
 function fact(n){
-    if(n ==1){
-        return 1;
-    }
-    return n * fact(n-1);
+    // if(n ==1){
+    //     return 1;
+    // }
+    // return n * fact(n-1);
+
+    //using array 
+    let arr = Array.from(Array(n+1).keys());
+    let c = arr.slice(1,).reduce((accumulator,currval)=>{
+        return accumulator*currval;
+    })
+    return c;
+
 }
 console.log(fact(5));
 

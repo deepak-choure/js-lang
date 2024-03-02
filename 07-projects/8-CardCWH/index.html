@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #0f0f0f;
+        }
+
+        .card {
+            display: flex;
+            border: solid black 0px;
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .capsule {
+            position: absolute;
+            bottom: 10px;
+            right: 8px;
+            z-index: 10;
+            background-color: rgb(52, 52, 52);
+            color: white;
+            opacity: 0.9;
+            font-weight: bolder;
+            font-size: medium;
+            border-radius: 6px;
+            padding: 4px;
+            padding-top: 1px;
+            font-family: Roboto, Arial, sans-serif;
+
+        }
+
+        .image img {
+            width: 200px;
+            border-radius: 6px;
+        }
+
+        .text h1 {
+            color: white;
+            margin: 0px 5px;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        .text p {
+            color: rgb(138, 138, 138);
+            font-family: Roboto, Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ"
+                    alt="Thumbnail">
+                <div class="capsule">31:06</div>
+            </div>
+            <div class="text">
+                <h1 class="title">Intro to Web Development | CodeWithHarry</h1>
+                <p>CodeWithHarry . 727k views . 2 months ago</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
+<!-- https://i.ytimg.com/vi/UzYRQURh_pY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCqIwQwDx1EIDwleUS2D1CGiar3LQ -->

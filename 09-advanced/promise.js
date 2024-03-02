@@ -9,11 +9,11 @@ const promisOne = new Promise(function(resolve,reject){
     },1000)
    
 });
-//2.
+
 promisOne.then(function(){
     console.log("Promise consumed");
 })
-
+//2.
 new Promise(function(resolve,reject){
     setTimeout(() => {
         console.log("Async task 2");
