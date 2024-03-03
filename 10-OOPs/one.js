@@ -18,7 +18,7 @@ function User(username ,loginCount,signedIn){
     this.signedIn = signedIn;
     return this;
 }
-
+//Constructor function should be called using new keyword for new execution context
 const userOne = new User("Hitesh", 12,true);
 const userTwo = new User("user",1,false)
 console.log(userOne);
