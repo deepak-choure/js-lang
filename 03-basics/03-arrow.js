@@ -70,4 +70,6 @@ console.log(add(2,4))
 //arrow in loop
 const myArr = [0,1,2,3,4]
 
-myArr.forEach((num)=>(num*2))
+myArr.forEach((num,index)=>(myArr[index]=num*2))
+
+console.log(myArr)

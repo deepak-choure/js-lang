@@ -17,5 +17,5 @@ let isLoggedIn = false
 
 
  //Object 
- console.log(typeof null)
+ console.log(typeof null)//actually it is primitive but it shows object as type which is famous bug in js 
  console.log(typeof undefined)

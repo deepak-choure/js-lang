@@ -19,29 +19,40 @@
     </div>
 </body>
 <script>
+
+    //how to listen to any event on elemnt or apply event to any action
     //1.
     // document.getElementById("owl").onclick = function(){
     //     alert("owl clicked")
     // }
-        //2.
+
+    //2.
     // document.getElementById("owl").addEventListener("click",function(e){
     //     // alert("owl image clicked")
     //     console.log(e);
-    //     //e is object which have many methods 
+    //     //e is object which have many methods known as event 
     // },true)
+
+
     //to study
     //type , timestamp ,defaultPrevented()
     // target , toElement , srcElement , currentTarget,
     //clientX , clientY, screenX, screenY 
     // altKey , ctrlKey , shift ,esc ,KeyCode 
+
+    ///************EVENT PRoPagation************//
+    //root ---> parent ----> target 
+    //how it listened 
+    //target ---> parent ---->root {event bubling default behaviour}
     
+    //EVENT BUBBLING From child to parent event propagation first child then parent then grandparent and so on..
         // document.getElementById("images").addEventListener("click", function(e){
         //     console.log("clicked inside the ul")
         // },false)
         // document.getElementById("owl").addEventListener("click",function(e){
         //     console.log("owl clicked")
         //     e.stopPropagation()
-        //     //it stop the propogation of event from bubbling 
+        //     //it stop the propogation of event from bubbling (from reaching to above parents)
         // },false)
 
         // document.getElementById("google").addEventListener("click",(e)=>{ 
@@ -49,13 +60,21 @@
         //     console.log("google clicked")
            
         // },false)
+
+
+        //*****what is targate ?? it is element on which event is applied//
+        document.getElementById("google",(e)=>{
+            console.log(e.target);//<a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+        })
     
 
 
 
 
+        //event propagation example = event applied on ul tag but passed to add children when target clicked event applied on that target only
     document.querySelector("#images").addEventListener("click",function(e){
-    //   console.log(  e.target.parentNode);
+        
+    //   console.log(  e.target.parentNode);//parentNode will be li for img(targ)
       //let removeit = e.target.parentNode;
       //removeit.remove()//it remove parent of targeted element if li clicked then ul will be removed (whole image will be gone)
 

@@ -41,3 +41,25 @@ console.log(url.replace("%20","-"));
 console.log(url.includes("hitesh"))
 
 console.log(gameName.split("-"));
+
+//three method to convert str into arr
+// 1. split("")(empty string as dilimmiter ) 2. Array.from 3.spread operator (...)
+let string = "lightening"
+let arr1 = string.split("");
+let arr2 = Array.from(string);
+let arr3 = [...str]
+console.log(arr1)
+console.log(arr2)
+console.log(arr3)
+//reverse the string 
+let str = "lightening";
+let arr = Array.from(str);
+
+for(let i =0;i<arr.length/2;i++){
+    let temp = arr[i];
+    arr[i] = arr[arr.length-1-i];
+    arr[arr.length-1-i]=temp ;
+}
+
+let newstr = arr.join('')
+console.log(newstr)

@@ -47,9 +47,11 @@ let str2 = " Deepak";
 let str3 = str1 + str2;
 console.log(str3);
 
+//type coersing in which number converted into string when + with " "
 console.log("1"+2);
 console.log(1+"2");
 console.log("1"+2+2);
-
+console.log(2+2+"2")
+console.log("2"+(2+2))
 console.log(+true);
 console.log(+"");

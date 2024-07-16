@@ -5,10 +5,10 @@ const Dc_heros = ["Superman", "flash","batman"]
 //push vs concat
 
 
-//marvel_heros.push(Dc_heros)
-// console.log(marvel_heros);
-// const heros = marvel_heros.concat(Dc_heros)
-// console.log(heros);
+marvel_heros.push(Dc_heros)
+console.log(marvel_heros);
+const heros = marvel_heros.concat(Dc_heros)
+console.log(heros);
 
 //spread operator
 const all_heros = [...marvel_heros,...Dc_heros]
