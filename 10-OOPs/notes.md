@@ -9,13 +9,14 @@ it is just a programming paradigm(style of writing programm)
 -collection of multiple properties and methods
 
 ## why use OOP
-to use full of js 
+to use full of js in readable fashion like class and its object and inheritance
 
 ## parts of OOP
 Object literal 
 
 -Constructor function (new keyword)
-- Prototype
+- Prototype - in any given data type prototype is its functionality which includes all properties and methods. Every data type prototype is inherited from Object as everything is Object in js 
+
 - Classes
 - Instance(new,this)
 

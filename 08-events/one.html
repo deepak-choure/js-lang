@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,20 +46,20 @@
     //target ---> parent ---->root {event bubling default behaviour}
     
     //EVENT BUBBLING From child to parent event propagation first child then parent then grandparent and so on..
-        // document.getElementById("images").addEventListener("click", function(e){
-        //     console.log("clicked inside the ul")
-        // },false)
-        // document.getElementById("owl").addEventListener("click",function(e){
-        //     console.log("owl clicked")
-        //     e.stopPropagation()
-        //     //it stop the propogation of event from bubbling (from reaching to above parents)
-        // },false)
+        document.getElementById("images").addEventListener("click", function(e){
+            console.log("clicked inside the ul")
+        },false)
+        document.getElementById("owl").addEventListener("click",function(e){
+            console.log("owl clicked")
+            e.stopPropagation()
+            //it stop the propogation of event from bubbling (from reaching to above parents)
+        },false)
 
-        // document.getElementById("google").addEventListener("click",(e)=>{ 
-        //     e.preventDefault()
-        //     console.log("google clicked")
+        document.getElementById("google").addEventListener("click",(e)=>{ 
+            e.preventDefault()
+            console.log("google clicked")
            
-        // },false)
+        },false)
 
 
         //*****what is targate ?? it is element on which event is applied//

@@ -1,3 +1,5 @@
+/***static (Polymorphism) */
+
 class User {
     constructor(username){
         this.username = username;

@@ -46,3 +46,4 @@ let person = {
 
 let anotherGreet = person.greet;
 anotherGreet();
+

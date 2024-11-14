@@ -28,6 +28,7 @@ class User {
 const hitesh  = new User("Hitesh@example.com","password");
 
 console.log(hitesh.email);
+console.log(hitesh.password);
 
 
 //ES5 syntax
