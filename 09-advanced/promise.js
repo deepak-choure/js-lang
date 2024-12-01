@@ -83,6 +83,32 @@ try {
  }
 consumePromiseFive()
 
+//Consuming multiple promise at once 
+function fetchPostData(){
+    return new Promise((resolve)=>{
+       setTimeout(() => {
+         resolve("Post data fetched")
+       }, 2000);
+    })
+}
+function fetchCommentData(){
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve("Comment data fetched.")
+        }, 2000);
+    })
+}
+async function getBlogData(){
+    try{
+        const [post,comment] = await Promise.all([fetchPostData(),fetchCommentData()]);
+        console.log(post,comment);
+        
+    } catch(error){
+        console.log("Error fetching blog data",error);
+        
+    }
+}
+getBlogData()
 
 
 async function getAllUsers(){
